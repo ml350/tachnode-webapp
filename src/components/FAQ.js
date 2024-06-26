@@ -51,7 +51,7 @@ export default function FAQ() {
             id="panel1d-header"
           >
             <Typography component="h3" variant="subtitle2">
-              How do I contact customer support if I have a question or issue?
+              What is the price for a 1-month subscription to the node service?
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
@@ -60,10 +60,7 @@ export default function FAQ() {
               gutterBottom
               sx={{ maxWidth: { sm: '100%', md: '70%' } }}
             >
-              You can reach our customer support team by emailing
-              <Link> support@email.com </Link>
-              or calling our toll-free number. We&apos;re here to assist you
-              promptly.
+              The price for a 1-month subscription is $150.
             </Typography>
           </AccordionDetails>
         </Accordion>
@@ -77,7 +74,7 @@ export default function FAQ() {
             id="panel2d-header"
           >
             <Typography component="h3" variant="subtitle2">
-              Can I return the product if it doesn&apos;t meet my expectations?
+               Where is the node hosted?
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
@@ -86,9 +83,7 @@ export default function FAQ() {
               gutterBottom
               sx={{ maxWidth: { sm: '100%', md: '70%' } }}
             >
-              Absolutely! We offer a hassle-free return policy. If you&apos;re not
-              completely satisfied, you can return the product within [number of
-              days] days for a full refund or exchange.
+               The node is hosted in Germany, in the same Data Center as the VPS to reduce latency. It's located close to the Jito location to ensure fast response times.
             </Typography>
           </AccordionDetails>
         </Accordion>
@@ -102,7 +97,7 @@ export default function FAQ() {
             id="panel3d-header"
           >
             <Typography component="h3" variant="subtitle2">
-              What makes your product stand out from others in the market?
+              Who manages the node service?
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
@@ -111,9 +106,7 @@ export default function FAQ() {
               gutterBottom
               sx={{ maxWidth: { sm: '100%', md: '70%' } }}
             >
-              Our product distinguishes itself through its adaptability, durability,
-              and innovative features. We prioritize user satisfaction and
-              continually strive to exceed expectations in every aspect.
+              The service is managed by a team. The team members listed as Admins, including @binary_gatsby, handle different aspects like networking and infrastructure.
             </Typography>
           </AccordionDetails>
         </Accordion>
@@ -127,7 +120,7 @@ export default function FAQ() {
             id="panel4d-header"
           >
             <Typography component="h3" variant="subtitle2">
-              Is there a warranty on the product, and what does it cover?
+              What kind of access do I get with the VPS?
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
@@ -136,10 +129,76 @@ export default function FAQ() {
               gutterBottom
               sx={{ maxWidth: { sm: '100%', md: '70%' } }}
             >
-              Yes, our product comes with a [length of warranty] warranty. It covers
-              defects in materials and workmanship. If you encounter any issues
-              covered by the warranty, please contact our customer support for
-              assistance.
+              You get dedicated node access through the VPS, including 20 proxies to prevent rate limiting by Jito.
+            </Typography>
+          </AccordionDetails>
+        </Accordion>
+        <Accordion
+          expanded={expanded === 'panel5'}
+          onChange={handleChange('panel5')}
+        >
+          <AccordionSummary
+            expandIcon={<ExpandMoreIcon />}
+            aria-controls="panel5d-content"
+            id="panel4d-header"
+          >
+            <Typography component="h3" variant="subtitle2">
+            Is there a rate limit on the RPC calls?
+            </Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography
+              variant="body2"
+              gutterBottom
+              sx={{ maxWidth: { sm: '100%', md: '70%' } }}
+            >
+              Yes, the service rate limits RPC calls to 100 transactions per second (TPS), which is ample for most users.
+            </Typography>
+          </AccordionDetails>
+        </Accordion>
+        <Accordion
+          expanded={expanded === 'panel6'}
+          onChange={handleChange('panel6')}
+        >
+          <AccordionSummary
+            expandIcon={<ExpandMoreIcon />}
+            aria-controls="panel6d-content"
+            id="panel4d-header"
+          >
+            <Typography component="h3" variant="subtitle2">
+            What kind of environment does the node operate on?
+            </Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography
+              variant="body2"
+              gutterBottom
+              sx={{ maxWidth: { sm: '100%', md: '70%' } }}
+            >
+              The node runs on a Linux KVM with Full Ubuntu. It includes a WebUI for managing the KVM, which requires 2FA setup on the first login for security.
+            </Typography>
+          </AccordionDetails>
+        </Accordion>
+        <Accordion
+          expanded={expanded === 'panel6'}
+          onChange={handleChange('panel6')}
+        >
+          <AccordionSummary
+            expandIcon={<ExpandMoreIcon />}
+            aria-controls="panel6d-content"
+            id="panel4d-header"
+          >
+            <Typography component="h3" variant="subtitle2">
+              Does the node support Geyser?
+            </Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography
+              variant="body2"
+              gutterBottom
+              sx={{ maxWidth: { sm: '100%', md: '70%' } }}
+            >
+              Yes, the node supports Geyser, which provides a fast and efficient data streaming option.
             </Typography>
           </AccordionDetails>
         </Accordion>
