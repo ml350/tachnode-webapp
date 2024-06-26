@@ -80,13 +80,10 @@ export default function LandingPage() {
       <CssBaseline />
       <AppAppBar mode={mode} toggleColorMode={toggleColorMode} />
       <Hero />
-      <Box sx={{ bgcolor: 'background.default' }}>
-        <LogoCollection />
+      <Box sx={{ bgcolor: 'background.default' }}> 
         <Features />
         <Divider />
-        <Testimonials />
-        <Divider />
-        <Highlights />
+        <Testimonials /> 
         <Divider />
         <Pricing />
         <Divider />
