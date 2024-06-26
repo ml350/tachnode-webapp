@@ -16,25 +16,25 @@ import ViewQuiltRoundedIcon from '@mui/icons-material/ViewQuiltRounded';
 const items = [
   {
     icon: <ViewQuiltRoundedIcon />,
-    title: 'Dashboard',
+    title: 'Unlimited HTTP & WebSocket Access',
     description:
-      'This item could provide a snapshot of the most important metrics or data points related to the product.',
+      'Seamless integration for all your Solana applications, including the Jito Simulate Bundle method (Rate limited to 100 TPS).',
     imageLight: 'url("/static/images/templates/templates-images/dash-light.png")',
     imageDark: 'url("/static/images/templates/templates-images/dash-dark.png")',
   },
   {
     icon: <EdgesensorHighRoundedIcon />,
-    title: 'Mobile integration',
+    title: 'Unlimited GRPC Streaming',
     description:
-      'This item could provide information about the mobile app version of the product.',
+      'Enjoy continuous, high-efficiency data streams with our Yellowstone GRPC plugin.',
     imageLight: 'url("/static/images/templates/templates-images/mobile-light.png")',
     imageDark: 'url("/static/images/templates/templates-images/mobile-dark.png")',
   },
   {
     icon: <DevicesRoundedIcon />,
-    title: 'Available on all platforms',
+    title: 'Ultra-Low Latency VPS',
     description:
-      'This item could let users know the product is available on all platforms, such as web, mobile, and desktop.',
+      'Experience sub-1ms latency with priority connections over 10Gbps fiber, ensuring your operations are always lightning-fast.',
     imageLight: 'url("/static/images/templates/templates-images/devices-light.png")',
     imageDark: 'url("/static/images/templates/templates-images/devices-dark.png")',
   },
@@ -55,7 +55,7 @@ export default function Features() {
         <Grid item xs={12} md={6}>
           <div>
             <Typography component="h2" variant="h4" color="text.primary">
-              Product features
+              What You Get:
             </Typography>
             <Typography
               variant="body1"

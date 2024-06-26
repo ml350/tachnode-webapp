@@ -14,8 +14,8 @@ import CheckCircleRoundedIcon from '@mui/icons-material/CheckCircleRounded';
 
 const tiers = [
   {
-    title: 'Free',
-    price: '0',
+    title: '100 TPS',
+    price: '150',
     description: [
       '10 users included',
       '2 GB of storage',
@@ -26,9 +26,9 @@ const tiers = [
     buttonVariant: 'outlined',
   },
   {
-    title: 'Professional',
+    title: '300 TPS',
     subheader: 'Recommended',
-    price: '15',
+    price: '400',
     description: [
       '20 users included',
       '10 GB of storage',
@@ -41,8 +41,8 @@ const tiers = [
     buttonVariant: 'contained',
   },
   {
-    title: 'Enterprise',
-    price: '30',
+    title: '600 TPS',
+    price: '800',
     description: [
       '50 users included',
       '30 GB of storage',
@@ -198,7 +198,7 @@ export default function Pricing() {
                   fullWidth
                   variant={tier.buttonVariant}
                   component="a"
-                  href="/material-ui/getting-started/templates/checkout/"
+                  href="#"
                   target="_blank"
                 >
                   {tier.buttonText}

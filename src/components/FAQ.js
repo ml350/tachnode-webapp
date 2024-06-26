@@ -40,6 +40,17 @@ export default function FAQ() {
       >
         Frequently asked questions
       </Typography>
+      <Typography
+        component="h4"
+        variant="h5"
+        color="text.primary"
+        sx={{
+          width: { sm: '100%', md: '100%' },
+          textAlign: { sm: 'left', md: 'left' },
+        }}
+      >
+        General Information
+      </Typography>
       <Box sx={{ width: '100%' }}>
         <Accordion
           expanded={expanded === 'panel1'}
@@ -180,12 +191,12 @@ export default function FAQ() {
           </AccordionDetails>
         </Accordion>
         <Accordion
-          expanded={expanded === 'panel6'}
-          onChange={handleChange('panel6')}
+          expanded={expanded === 'panel7'}
+          onChange={handleChange('panel7')}
         >
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
-            aria-controls="panel6d-content"
+            aria-controls="panel7d-content"
             id="panel4d-header"
           >
             <Typography component="h3" variant="subtitle2">
@@ -202,6 +213,174 @@ export default function FAQ() {
             </Typography>
           </AccordionDetails>
         </Accordion>
+      </Box>
+      <Typography
+        component="h4"
+        variant="h5"
+        color="text.primary"
+        sx={{
+          width: { sm: '100%', md: '100%' },
+          textAlign: { sm: 'left', md: 'left' },
+        }}
+      >
+        Performance and Testing
+      </Typography>
+      <Box sx={{ width: '100%' }}>
+        <Accordion
+          expanded={expanded === 'panel8'}
+          onChange={handleChange('panel8')}
+        >
+          <AccordionSummary
+            expandIcon={<ExpandMoreIcon />}
+            aria-controls="panel8d-content"
+            id="panel1d-header"
+          >
+            <Typography component="h3" variant="subtitle2">
+              How fast are the transactions with this node?
+            </Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography
+              variant="body2"
+              gutterBottom
+              sx={{ maxWidth: { sm: '100%', md: '70%' } }}
+            >
+              Users have reported response times significantly faster than other services, like QuickNode, which charges $300/month. You can expect faster transaction times, especially with higher transaction tips.
+            </Typography>
+          </AccordionDetails>
+        </Accordion> 
+
+        <Accordion
+          expanded={expanded === 'panel9'}
+          onChange={handleChange('panel9')}
+        >
+          <AccordionSummary
+            expandIcon={<ExpandMoreIcon />}
+            aria-controls="panel9d-content"
+            id="panel1d-header"
+          >
+            <Typography component="h3" variant="subtitle2">
+            Can I test the service before committing to a full month?
+            </Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography
+              variant="body2"
+              gutterBottom
+              sx={{ maxWidth: { sm: '100%', md: '70%' } }}
+            >
+              Yes, you can test the service for one day for a cost of 0.1 SOL.
+            </Typography>
+          </AccordionDetails>
+        </Accordion> 
+
+         <Accordion
+          expanded={expanded === 'panel10'}
+          onChange={handleChange('panel10')}
+        >
+          <AccordionSummary
+            expandIcon={<ExpandMoreIcon />}
+            aria-controls="panel10d-content"
+            id="panel1d-header"
+          >
+            <Typography component="h3" variant="subtitle2">
+            How do I sign up for the service?
+            </Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography
+              variant="body2"
+              gutterBottom
+              sx={{ maxWidth: { sm: '100%', md: '70%' } }}
+            >
+              To sign up, send your payment to the specified wallet address: 86zS2NS4NtDsJoyFYqSemWVksUwk93varFCE5pViEmQX. Then, create a ticket confirming your name, wallet address, and email. Server details and relevant information will be sent to you via email within 24 hours.
+            </Typography>
+          </AccordionDetails>
+        </Accordion> 
+      </Box>
+      <Typography
+        component="h4"
+        variant="h5"
+        color="text.primary"
+        sx={{
+          width: { sm: '100%', md: '100%' },
+          textAlign: { sm: 'left', md: 'left' },
+        }}
+      >
+        Additional Features
+      </Typography>
+      <Box sx={{ width: '100%' }}>
+        <Accordion
+          expanded={expanded === 'panel11'}
+          onChange={handleChange('panel11')}
+        >
+          <AccordionSummary
+            expandIcon={<ExpandMoreIcon />}
+            aria-controls="panel11d-content"
+            id="panel1d-header"
+          >
+            <Typography component="h3" variant="subtitle2">
+              What other tools and features are provided?
+            </Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography
+              variant="body2"
+              gutterBottom
+              sx={{ maxWidth: { sm: '100%', md: '70%' } }}
+            >
+              The service offers a gRPC endpoint if your bot supports it, which can be faster than Jito. There's also a web interface for easy file uploads and transaction logs for monitoring outbound transactions.
+            </Typography>
+          </AccordionDetails>
+        </Accordion> 
+
+        <Accordion
+          expanded={expanded === 'panel12'}
+          onChange={handleChange('panel12')}
+        >
+          <AccordionSummary
+            expandIcon={<ExpandMoreIcon />}
+            aria-controls="panel12d-content"
+            id="panel1d-header"
+          >
+            <Typography component="h3" variant="subtitle2">
+            How do I manage files and logs?
+            </Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography
+              variant="body2"
+              gutterBottom
+              sx={{ maxWidth: { sm: '100%', md: '70%' } }}
+            >
+              You can upload files through a drag-and-drop web interface that copies them to your desktop environment under /mnt/data. Transaction logs are located at /var/log/haproxy.log.
+            </Typography>
+          </AccordionDetails>
+        </Accordion> 
+
+         <Accordion
+          expanded={expanded === 'panel13'}
+          onChange={handleChange('panel13')}
+        >
+          <AccordionSummary
+            expandIcon={<ExpandMoreIcon />}
+            aria-controls="panel13d-content"
+            id="panel1d-header"
+          >
+            <Typography component="h3" variant="subtitle2">
+            What is the default password and security setup?
+            </Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography
+              variant="body2"
+              gutterBottom
+              sx={{ maxWidth: { sm: '100%', md: '70%' } }}
+            >
+              The default password for the environment is happyrpc!, but you will set up 2FA during your first login to secure the KVM.
+            </Typography>
+          </AccordionDetails>
+        </Accordion> 
       </Box>
     </Container>
   );
