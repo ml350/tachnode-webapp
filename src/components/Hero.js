@@ -69,19 +69,13 @@ export default function Hero() {
             useFlexGap
             sx={{ pt: 2, width: { xs: '100%', sm: 'auto' } }}
           >
-            <TextField
-              id="outlined-basic"
-              hiddenLabel
-              size="small"
-              variant="outlined"
-              aria-label="Enter your email address"
-              placeholder="Your email address"
-              inputProps={{
-                autoComplete: 'off',
-                'aria-label': 'Enter your email address',
-              }}
-            />
-            <Button variant="contained" color="primary">
+            <Button 
+              variant="contained" 
+              color="primary" 
+              href="https://discord.gg/dFxnvkCdgq" 
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Start now
             </Button>
           </Stack> 
@@ -95,8 +89,8 @@ export default function Hero() {
             width: '100%',
             backgroundImage:
               theme.palette.mode === 'light'
-                ? 'url("/static/images/templates/templates-images/hero-light.png")'
-                : 'url("/static/images/templates/templates-images/hero-dark.png")',
+                ? 'url("/images/header.png")'
+                : 'url("/images/header.png")',
             backgroundSize: 'cover',
             borderRadius: '10px',
             outline: '1px solid',

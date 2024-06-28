@@ -9,9 +9,7 @@ import ToggleButton from '@mui/material/ToggleButton';
 import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
 import AutoAwesomeRoundedIcon from '@mui/icons-material/AutoAwesomeRounded';
 import AppAppBar from './components/AppAppBar';
-import Hero from './components/Hero';
-import LogoCollection from './components/LogoCollection';
-import Highlights from './components/Highlights';
+import Hero from './components/Hero'; 
 import Pricing from './components/Pricing';
 import Features from './components/Features';
 import Testimonials from './components/Testimonials';
@@ -19,7 +17,7 @@ import FAQ from './components/FAQ';
 import Footer from './components/Footer';
 import getLPTheme from './getLPTheme';
 
-function ToggleCustomTheme({ showCustomTheme, toggleCustomTheme }) {
+function ToggleCustomTheme({ useCustomTheme, toggleTheme }) {
   return (
     <Box
       sx={{
@@ -34,8 +32,8 @@ function ToggleCustomTheme({ showCustomTheme, toggleCustomTheme }) {
       <ToggleButtonGroup
         color="primary"
         exclusive
-        value={showCustomTheme}
-        onChange={toggleCustomTheme}
+        value={useCustomTheme}
+        onChange={toggleTheme}
         aria-label="Platform"
         sx={{
           backgroundColor: 'background.default',
@@ -44,7 +42,7 @@ function ToggleCustomTheme({ showCustomTheme, toggleCustomTheme }) {
           },
         }}
       >
-        <ToggleButton value>
+        <ToggleButton value={true}>
           <AutoAwesomeRoundedIcon sx={{ fontSize: '20px', mr: 1 }} />
           Custom theme
         </ToggleButton>
@@ -55,15 +53,13 @@ function ToggleCustomTheme({ showCustomTheme, toggleCustomTheme }) {
 }
 
 ToggleCustomTheme.propTypes = {
-  showCustomTheme: PropTypes.shape({
-    valueOf: PropTypes.func.isRequired,
-  }).isRequired,
-  toggleCustomTheme: PropTypes.func.isRequired,
+  useCustomTheme: PropTypes.bool.isRequired,
+  toggleTheme: PropTypes.func.isRequired,
 };
 
 export default function LandingPage() {
   const [mode, setMode] = React.useState('light');
-  const [showCustomTheme, setShowCustomTheme] = React.useState(true);
+  const [useCustomTheme, setUseCustomTheme] = React.useState(false);
   const LPtheme = createTheme(getLPTheme(mode));
   const defaultTheme = createTheme({ palette: { mode } });
 
@@ -71,12 +67,12 @@ export default function LandingPage() {
     setMode((prev) => (prev === 'dark' ? 'light' : 'dark'));
   };
 
-  const toggleCustomTheme = () => {
-    setShowCustomTheme((prev) => !prev);
+  const toggleTheme = () => {
+    setUseCustomTheme((prev) => !prev);
   };
 
   return (
-    <ThemeProvider theme={showCustomTheme ? LPtheme : defaultTheme}>
+    <ThemeProvider theme={useCustomTheme ? LPtheme : defaultTheme}>
       <CssBaseline />
       <AppAppBar mode={mode} toggleColorMode={toggleColorMode} />
       <Hero />
@@ -90,11 +86,7 @@ export default function LandingPage() {
         <FAQ />
         <Divider />
         <Footer />
-      </Box>
-      <ToggleCustomTheme
-        showCustomTheme={showCustomTheme}
-        toggleCustomTheme={toggleCustomTheme}
-      />
+      </Box> 
     </ThemeProvider>
   );
 }
